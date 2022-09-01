@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #ce3c6b;
+  --color-ticket: #f4e4eb;
+  --color-gradient-start: #e05b79;
+  --color-gradient-middle: #cf406d;
+  --color-gradient-end: #b60b50;
+  --color-background: bisque;
+  --shadow-ticket: 2px 2px 4px rgba(255, 179, 85, 0.6);
+  --shadow-ticket-side: -2px -2px 4px rgb(255, 179, 85, 0.6);
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  width: 20rem;
+  margin: 4rem auto;
+}
+
+.logo img,
+a {
+  width: 100%;
+}
+
+.ticket {
+  display: flex;
+  transform: rotate(-15deg);
+}
+
+.content {
+  flex: 8 8 18rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  box-shadow: var(--shadow-ticket);
+}
+
+.content::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-right: 2px dashed var(--color-background);
+  top: 0;
+  right: -1px;
+  height: 90%;
+  z-index: 5;
+}
+
+.logo {
+  flex: 1 1 5rem;
+}
+
+.info {
+  flex: 2 2 5rem;
+  margin-left: 1rem;
+  color: var(--color-primary);
+}
+
+.side {
+  flex: 2 2 1rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  background-color: #e0478d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  box-shadow: var(--shadow-ticket-side);
+  position: relative;
+}
+
+.side::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: var(--color-background);
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: -0.75rem;
+  left: 2.375rem;
+  border-radius: 1rem;
+  z-index: 5;
+}
+
+.side::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background-color: var(--color-background);
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -0.75rem;
+  left: 2.375rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px rgba(255, 179, 85, 0.6) inset;
+  transform: rotate(-140deg);
+  z-index: 5;
+}
+
+.description {
+  position: relative;
+  display: inline;
+}
+
+.note {
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  text-align: center;
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  width: 0.5rem;
+  height: 0.5rem;
+  font-size: 8px;
+  font-weight: lighter;
+  border-radius: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.info img {
+  width: 100%;
+}
