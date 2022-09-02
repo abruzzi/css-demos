@@ -22,6 +22,14 @@ body {
   max-width: 480px;
   width: 70%;
   margin: 10rem auto;
+
+  /*
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
 }
 
 .ticket {
@@ -39,7 +47,6 @@ body {
 
   border-radius: 1rem 0 0 1rem;
   position: relative;
-  box-shadow: 2px 2px 4px var(--color-ticket);
 }
 
 .content::after {
@@ -64,18 +71,17 @@ body {
 
   border-radius: 1rem 0 0 1rem;
   position: relative;
-  box-shadow: -2px -2px 4px var(--color-ticket);
 }
 
 .aside::before {
   content: "";
   display: block;
   width: 2rem;
-  height: 2rem;
+  height: 1rem;
   background-color: bisque;
   position: absolute;
-  border-radius: 1rem;
-  top: -1rem;
+  border-radius: 0 0 1rem 1rem;
+  top: -1px;
   right: -1rem;
 }
 
@@ -83,11 +89,11 @@ body {
   content: "";
   display: block;
   width: 2rem;
-  height: 2rem;
+  height: 1rem;
   background-color: bisque;
   position: absolute;
-  border-radius: 1rem;
-  bottom: -1rem;
+  border-radius: 1rem 1rem 0 0;
+  bottom: -1px;
   right: -1rem;
 }
 
