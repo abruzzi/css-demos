@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-text: #1b1c23;
+  --color-primary: #4a43eb;
+  --color-background: #edecf2;
+  --color-text-secondary: #333;
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Open Sans", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.container {
+  min-width: 800px;
+  max-width: 90%;
+  margin: 1rem auto;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list li:last-child {
+  margin-left: auto;
+}
+
+.nav-list li:first-child {
+  margin-right: 3rem;
+}
+
+.link {
+  padding-inline: 1rem;
+  font-weight: lighter;
+}
+
+.button-secondary {
+  appearance: none;
+  border: 1px solid var(--color-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+
+/* hero */
+.hero {
+  display: flex;
+  margin: 4rem 2rem;
+  align-items: center;
+}
+
+.brief {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.brief h1 {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.brief p {
+  color: var(--color-text-secondary);
+  margin: 1rem 0;
+}
+
+.button-primary {
+  appearance: none;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: 2px 2px 6px #999;
+}
+
+.image-desc {
+  flex: 1;
+  position: relative;
+}
+
+.image-desc img {
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 6px #999;
+}
+
+.image-desc .description {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  color: white;
+}
+
+.image-desc .rating {
+  margin-left: 1rem;
+}
